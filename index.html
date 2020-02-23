@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/olx.css">
+    <link rel="stylesheet" href="./css/alertify.css">
+    <link rel="stylesheet" href="./css/alertify.min.css">
+    <link rel="icon" type="" sizes="16x16" href="./icons/icons8-favorite-cart-96.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <title>Main | OLX</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+    * {
+        font-family: 'Quicksand', sans-serif;
+    }
+</style>
+
+<body>
+    <!-- NAV-BAR START-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">OLX PAKISTAN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <input class="form-control col-md-8 " id="myInput" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="myFunction()">Search</button> -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown" id="signInUser" style="display:none">
+                        <a style="color:black" class="nav-link dropdown-toggle" href="#" id="name" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link" style="color:black !important">
+                                <i class="fas fa-angle-right" onclick="window.location.href='./pages/myads.html'">
+                                    My Ads</i>
+                            </a>
+                            <a class="nav-link" style="color:black !important">
+                                <i class="fas fa-angle-right" onclick="window.location.href='./pages/chat.html'">
+                                    Chat</i>
+                            </a>
+                            <a class="nav-link" style="color:black !important">
+                                <i class="fas fa-angle-right" onclick="window.location.href='./pages/adcrte.html'">
+                                    Submit Ad</i>
+                            </a>
+                            <a class="nav-link" style="color:black !important">
+                                <i class="fas fa-sign-in-alt" onclick="logout()">
+                                    Logout</i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#exampleModal" id="login">
+                            <i class="fas fa-user-plus"></i>Login</a>
+                    </li>
+                </ul>
+
+            </form>
+    </nav>
+    <!-- NAV-BAR END-->
+    <!-- CAROSEL START -->
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="3" class="active"></li>
+            </ol>
+            <div class="carousel-inner" style="height:520px">
+                <div class="carousel-item active">
+                    <img src="./images/676.png" class="d-block w-100" alt="..." height="530px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 style="font-size:100px; color: black">Pakistan No.1 </h1>
+                        <p style="font-size:50px; color: black">Market Place for Selling and Buying</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/1_YRqVqNSK9Y9H48Z2L4RFrA.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 style="font-size:100px">Pakistan No.1 </h1>
+                        <p style="font-size:50px">Market Place for Selling and Buying</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/56755965.jpg" class="d-block w-100" alt="..." height="530px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 style="font-size:100px; color: black">Pakistan No.1 </h1>
+                        <p style="font-size:50px">Market Place for Selling and Buying</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/rB9k.png" class="d-block w-100" alt="..." height="530px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 style="font-size:100px; ">Pakistan No.1 </h1>
+                        <p style="font-size:50px">Market Place for Selling and Buying</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- CAROSEL END -->
+
+    <!-- Modal SIGNUP START-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SIGNUP</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="" placeholder="Enter Name">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-secondary" onclick="signup()">SIGNUP</button>
+                    <button type="submit" class="btn btn-secondary" onclick="window.location.href='./pages/signin.html'">SIGNIN</button>
+                    <button type="submit" class="btn btn-primary" onclick="logfb()">
+                        <i class="fab fa-facebook"></i>
+                        SIGNIN WITH FACEBOOK</button>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal SIGNUP END-->
+    <div class="container">
+        <div class="text-center col-xl-12">
+            <div class="">
+                <br>
+                <div class="dropdown" style="float:left">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        BROWSE BY CATEGORY
+                    </button>
+                    <div class="dropdown-menu col-md-12" aria-labelledby="dropdownMenu2">
+                            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                        <!-- <a class="dropdown-item" href="" style="color:black !important" onclick="getData()">All Ads</a> -->
+                        <a class="dropdown-item" href="" style="color:black !important" onclick="cars()">Cars and Bikes</a>
+                        <a class="dropdown-item" href="" style="color:black !important" onclick="furniture()">Furniture And Machines
+                        </a>
+                        <a class="dropdown-item" href="" style="color:black !important" onclick="houses()">Houses And Homes
+                        </a>
+                        <a class="dropdown-item" id="other" href="" style="color:black !important" onclick="other()">Others</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+            <div id="view">
+                
+            </div>
+            <div id="snackbar">SuccessFully</div>
+        <!-- USER DATA ON MODAL START -->
+        <div class="modal fade" id="Modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="card-header" id="nameTitle"></h5>
+                        <!-- <img class="card-img-top img-fluid" src="" alt="..." id="imgAd"> -->
+                        <h5 class="card-title" id="modelModal"></h5>
+                        <h5 class="card-title" id="mobileModal"></h5>
+                        <h5 class="card-title" id="conditionModal"></h5>
+                        <p class="card-text" id="descriptionModal"></p>
+                        <p class="card-text" id="priceModal"></p>
+                        <p class="card-text" id="locationModal"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary" onclick='startchat()'>Start Chat</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- USER DATA ON MODAL END -->
+    </div>
+    <!-- FOOTER start -->
+    <div class="container-flux bg-light foot">
+        <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+                <h5 class="text-uppercase" style="margin: 50px;">OLX PAKISTAN</h5>
+                <p style="margin: 50px;">We operate a network of market-leading trading platforms in over 40 countries that are used by more than
+                    330 million people every month to buy and sell almost anything.</p>
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-3 mb-md-0 mb-3" style="margin-top: 20px;">
+                <h5 class="text-uppercase">ABOUT US</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="javascript:void(0)">Home</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">About</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Careers</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Contact US</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-md-0 mb-3" style="margin-top: 20px;">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Popular Categories</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="javascript:void(0)">BIKES AND CARS</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">FURNITURE</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">CLOTHES</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">HOUSES</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="javascript:void(0)">OLX PAKISTAN</a>
+    </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" i></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/alertify.js"></script>
+    <script src="./js/alertify.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <!-- <script src="./js/signin.js"></script> -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

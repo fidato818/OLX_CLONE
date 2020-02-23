@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/olx.css">
+    <link rel="icon" type="" sizes="16x16" href="../icons/icons8-favorite-cart-96.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <title>Ad Page | OLX</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+    *{
+        font-family: 'Quicksand', sans-serif;
+    }
+
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html">OLX PAKISTAN</a>
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item dropdown" id="signInUser">
+                    <a style="color:black" class="nav-link dropdown-toggle" href="#" id="name" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link" style="color:black !important"><i class="fas fa-sign-in-alt" onclick="logout()">Logout</i></a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal" id="login" style="display:none"><i
+                            class="fas fa-user-plus"></i>Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CREATE ADs start-->
+    <div class="container">
+        <div class="col-md-8 offset-md-2">
+            <br>
+            <label for="">Condition</label>
+            <select class="btn btn-light dropdown-toggle col-md-12" name="" id="dropdownvalue">
+                <option class="dropdown-item" value="New">New</option>
+                <option class="dropdown-item" value="Used">Used</option>
+            </select>
+            <br>
+            <label for="">Categories</label>
+            <select class="btn btn-light dropdown-toggle col-md-12" name="" id="cate">
+                <option class="dropdown-item" value="cars">Cars And Bikes</option>
+                <option class="dropdown-item" value="furniture">Furniture And Machines</option>
+                <option class="dropdown-item" value="houses">Houses And Homes</option>
+                <option class="dropdown-item" value="others">Others</option>
+            </select>
+            <div>
+                <label for="">User Name</label>
+                <input type="text" class="form-control" id="name" placeholder="User Name">
+            </div>
+            <div class="form-group">
+                <label for="">Post Title</label>
+                <input required type="text" class="form-control" id="posttitle" placeholder="Like: Mobile Name, Cars Name, etc...">
+            </div>
+            <div class="form-group">
+                <label for="">Post Model</label>
+                <input required type="text" class="form-control" id="postmodel" placeholder="Like: S4, Note 9, 1993, etc...">
+            </div>
+            <div class="form-group">
+                <label for="">Your Product Description:</label>
+                <textarea required class="form-control" id="postdes" rows="3" placeholder="Your Product Description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="">Price</label>
+                <input required type="text" class="form-control" id="price" placeholder="Your Product Price">
+            </div>
+            <div class="form-group">
+                <label for="">Phone / Mobile No</label>
+                <input required type="number" class="form-control" id="mobile" placeholder="Phone / Mobile No">
+            </div>
+            <div class="form-group">
+                <label for="">Location</label>
+                <input required type="text" class="form-control" id="location" placeholder="Location">
+            </div>
+            <div class="form-group">
+                <label for="">Please Attach Photos for Products</label>
+                <input required type="file" class="form-control" id="file">
+            </div><br>
+            <input class="btn btn-primary" type="button" value="Post Ad" onclick="postAd()">
+        </div>
+        <!-- CREATE ADs end -->
+
+
+        <div id="snackbar" style="background-color:black;color:white">Signout SuccessFully</div>
+        <div id="adpost" style="background-color:black;color:white">Your Ad Post SuccessFully</div>
+
+    </div> <!-- Last Container div -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" i></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+
+</html>
